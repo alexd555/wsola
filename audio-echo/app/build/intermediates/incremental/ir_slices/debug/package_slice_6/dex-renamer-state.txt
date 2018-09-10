@@ -1,0 +1,4 @@
+#Mon Sep 10 11:02:34 IDT 2018
+base.0=D\:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+path.0=classes.dex
+renamed.0=classes.dex

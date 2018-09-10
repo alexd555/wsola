@@ -1,0 +1,33 @@
+# ninja log v5
+3	687	0	CMakeFiles/echo.dir/FIFOSampleBuffer.cpp.o	41d250fa24e04acf
+10	783	0	CMakeFiles/echo.dir/RateTransposer.cpp.o	24adbfae6c8b37bb
+1	821	0	CMakeFiles/echo.dir/audio_common.cpp.o	4033bf1ac5cc6fa5
+13	890	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+5	895	0	CMakeFiles/echo.dir/debug_utils.cpp.o	75042def1fdc1164
+8	900	0	CMakeFiles/echo.dir/audio_recorder.cpp.o	fda1f12449d1bfae
+821	1537	0	CMakeFiles/echo.dir/AAFilter.cpp.o	ca796d443fdabf86
+895	1547	0	CMakeFiles/echo.dir/InterpolateShannon.cpp.o	db5a4bba8508856
+688	1570	0	CMakeFiles/echo.dir/TDStretch.cpp.o	98534726060b897a
+900	1592	0	CMakeFiles/echo.dir/InterpolateCubic.cpp.o	cc1bc9c9994d82c6
+783	1651	0	CMakeFiles/echo.dir/audio_player.cpp.o	6e3bb05c9d7bc6fa
+891	1765	0	CMakeFiles/echo.dir/SoundTouch.cpp.o	6ba329653b5562a7
+1547	2078	0	CMakeFiles/echo.dir/sse_optimized.cpp.o	dfb2712facb03bb7
+1570	2130	0	CMakeFiles/echo.dir/InterpolateLinear.cpp.o	67ff185bd39fcfe7
+1593	2166	0	CMakeFiles/echo.dir/cpu_detect_x86.cpp.o	9cc0d433bede32db
+1537	2221	0	CMakeFiles/echo.dir/audio_filter_function.cpp.o	2f3720605d9e37b8
+1651	2234	0	CMakeFiles/echo.dir/FIRFilter.cpp.o	751de3b88c62dfc
+2234	2363	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+2	562	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+562	847	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+2	4029	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+4029	5042	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+2	468	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+468	587	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+2	381	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+381	500	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+2	418	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+418	534	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+3	466	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+466	588	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78
+2	392	0	CMakeFiles/echo.dir/audio_main.cpp.o	4431702f4df806b3
+393	501	0	D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so	cf874659c6759e78

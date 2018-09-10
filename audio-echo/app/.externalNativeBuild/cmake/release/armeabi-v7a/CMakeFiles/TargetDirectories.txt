@@ -1,0 +1,3 @@
+D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/echo.dir
+D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/OneDrive/OneDrive - Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
