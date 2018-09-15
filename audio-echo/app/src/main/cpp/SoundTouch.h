@@ -209,6 +209,8 @@ protected :
 
 public:
     SoundTouch();
+    bool FilterFunc_Init(void *buf, uint32_t sizeInBytes) ;
+    void* FilterFunc_Fini(void);
     virtual ~SoundTouch();
 
     /// Get SoundTouch library version string

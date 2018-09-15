@@ -255,11 +255,11 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
               soundTouch.setSetting(SETTING_SEQUENCE_MS, 40);
               soundTouch.setSetting(SETTING_SEEKWINDOW_MS, 15);
               soundTouch.setSetting(SETTING_OVERLAP_MS, 8);
-              soundTouch.putSamples((float *) static_cast<sample_buf *>(data)->buf_,
-                                    static_cast<sample_buf *>(data)->size_/2);
-              static_cast<sample_buf *>(data)->size_ =
-                      soundTouch.receiveSamples((float *) static_cast<sample_buf *>(data)->buf_,
-                                                static_cast<sample_buf *>(data)->size_/2);
+
+              sample_buf *buf = static_cast<sample_buf *>(data);
+              soundTouch.putSamples((float *)buf->buf_, buf->size_/2);
+              buf->size_ = 2*soundTouch.receiveSamples((float *)buf->buf_, buf->size_/2);
+              buf->cap_ = buf->size_;
           }
             break;
         default:

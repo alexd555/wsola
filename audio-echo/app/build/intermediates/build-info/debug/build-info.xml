@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1536589371828"
+    timestamp="1537016619497"
     token="-2319029479415233377"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,13 +23,14 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
+
     <build
         build-mode="FULL"
-        timestamp="1536588366303"
+        timestamp="1537015822846"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
         <artifact
             location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
@@ -38,6 +39,9 @@
             type="SPLIT" />
         <artifact
             location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -66,15 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1536589037065"
+        timestamp="1537016619497"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1536589371828"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

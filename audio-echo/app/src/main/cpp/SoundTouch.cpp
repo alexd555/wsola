@@ -110,7 +110,15 @@ SoundTouch::SoundTouch()
     bSrateSet = false;
 }
 
+bool SoundTouch::FilterFunc_Init(void *buf, uint32_t sizeInBytes) {
+    memset(buf, 0, sizeInBytes);
+    return true;
+}
+void* SoundTouch::FilterFunc_Fini(void) {
 
+    void *buf = output;
+    return buf;
+}
 SoundTouch::~SoundTouch()
 {
     delete pRateTransposer;
