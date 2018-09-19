@@ -35,7 +35,7 @@ include rules.ninja
 build CMakeFiles/echo.dir/audio_common.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/audio_common.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\audio_common.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\audio_common.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -43,7 +43,7 @@ build CMakeFiles/echo.dir/audio_common.cpp.o: CXX_COMPILER__echo D$:/OneDrive/On
 build CMakeFiles/echo.dir/audio_main.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/audio_main.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\audio_main.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\audio_main.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -51,7 +51,7 @@ build CMakeFiles/echo.dir/audio_main.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneD
 build CMakeFiles/echo.dir/audio_player.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/audio_player.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\audio_player.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\audio_player.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -59,7 +59,7 @@ build CMakeFiles/echo.dir/audio_player.cpp.o: CXX_COMPILER__echo D$:/OneDrive/On
 build CMakeFiles/echo.dir/audio_recorder.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/audio_recorder.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\audio_recorder.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\audio_recorder.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -67,7 +67,7 @@ build CMakeFiles/echo.dir/audio_recorder.cpp.o: CXX_COMPILER__echo D$:/OneDrive/
 build CMakeFiles/echo.dir/debug_utils.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/debug_utils.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\debug_utils.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\debug_utils.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -75,7 +75,7 @@ build CMakeFiles/echo.dir/debug_utils.cpp.o: CXX_COMPILER__echo D$:/OneDrive/One
 build CMakeFiles/echo.dir/SoundTouch.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/SoundTouch.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\SoundTouch.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\SoundTouch.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -83,7 +83,7 @@ build CMakeFiles/echo.dir/SoundTouch.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneD
 build CMakeFiles/echo.dir/RateTransposer.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/RateTransposer.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\RateTransposer.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\RateTransposer.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -91,7 +91,7 @@ build CMakeFiles/echo.dir/RateTransposer.cpp.o: CXX_COMPILER__echo D$:/OneDrive/
 build CMakeFiles/echo.dir/TDStretch.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/TDStretch.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\TDStretch.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\TDStretch.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -99,7 +99,7 @@ build CMakeFiles/echo.dir/TDStretch.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDr
 build CMakeFiles/echo.dir/AAFilter.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/AAFilter.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\AAFilter.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\AAFilter.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -107,7 +107,7 @@ build CMakeFiles/echo.dir/AAFilter.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDri
 build CMakeFiles/echo.dir/FIFOSampleBuffer.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/FIFOSampleBuffer.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\FIFOSampleBuffer.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\FIFOSampleBuffer.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -115,7 +115,7 @@ build CMakeFiles/echo.dir/FIFOSampleBuffer.cpp.o: CXX_COMPILER__echo D$:/OneDriv
 build CMakeFiles/echo.dir/InterpolateCubic.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/InterpolateCubic.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\InterpolateCubic.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\InterpolateCubic.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -123,7 +123,7 @@ build CMakeFiles/echo.dir/InterpolateCubic.cpp.o: CXX_COMPILER__echo D$:/OneDriv
 build CMakeFiles/echo.dir/InterpolateLinear.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/InterpolateLinear.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\InterpolateLinear.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\InterpolateLinear.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -131,7 +131,7 @@ build CMakeFiles/echo.dir/InterpolateLinear.cpp.o: CXX_COMPILER__echo D$:/OneDri
 build CMakeFiles/echo.dir/InterpolateShannon.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/InterpolateShannon.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\InterpolateShannon.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\InterpolateShannon.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -139,7 +139,7 @@ build CMakeFiles/echo.dir/InterpolateShannon.cpp.o: CXX_COMPILER__echo D$:/OneDr
 build CMakeFiles/echo.dir/FIRFilter.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/FIRFilter.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\FIRFilter.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\FIRFilter.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -147,7 +147,7 @@ build CMakeFiles/echo.dir/FIRFilter.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDr
 build CMakeFiles/echo.dir/sse_optimized.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/sse_optimized.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\sse_optimized.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\sse_optimized.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -155,7 +155,7 @@ build CMakeFiles/echo.dir/sse_optimized.cpp.o: CXX_COMPILER__echo D$:/OneDrive/O
 build CMakeFiles/echo.dir/cpu_detect_x86.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/cpu_detect_x86.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\cpu_detect_x86.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\cpu_detect_x86.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -163,7 +163,7 @@ build CMakeFiles/echo.dir/cpu_detect_x86.cpp.o: CXX_COMPILER__echo D$:/OneDrive/
 build CMakeFiles/echo.dir/audio_filter_function.cpp.o: CXX_COMPILER__echo D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/src/main/cpp/audio_filter_function.cpp
   DEFINES = -Decho_EXPORTS
   DEP_FILE = CMakeFiles\echo.dir\audio_filter_function.cpp.o.d
-  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
+  FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem E:/Android/sdk/ndk-bundle/sources/android/support/include -isystem E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include
   IN_ABS = "D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp\audio_filter_function.cpp"
   OBJECT_DIR = CMakeFiles\echo.dir
@@ -177,8 +177,8 @@ build CMakeFiles/echo.dir/audio_filter_function.cpp.o: CXX_COMPILER__echo D$:/On
 # Link the shared library D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libecho.so
 
 build D$:/OneDrive/OneDrive$ -$ Technion/projectA/new_echo_filter/android-ndk/audio-echo/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libecho.so: CXX_SHARED_LIBRARY_LINKER__echo CMakeFiles/echo.dir/audio_common.cpp.o CMakeFiles/echo.dir/audio_main.cpp.o CMakeFiles/echo.dir/audio_player.cpp.o CMakeFiles/echo.dir/audio_recorder.cpp.o CMakeFiles/echo.dir/debug_utils.cpp.o CMakeFiles/echo.dir/SoundTouch.cpp.o CMakeFiles/echo.dir/RateTransposer.cpp.o CMakeFiles/echo.dir/TDStretch.cpp.o CMakeFiles/echo.dir/AAFilter.cpp.o CMakeFiles/echo.dir/FIFOSampleBuffer.cpp.o CMakeFiles/echo.dir/InterpolateCubic.cpp.o CMakeFiles/echo.dir/InterpolateLinear.cpp.o CMakeFiles/echo.dir/InterpolateShannon.cpp.o CMakeFiles/echo.dir/FIRFilter.cpp.o CMakeFiles/echo.dir/sse_optimized.cpp.o CMakeFiles/echo.dir/cpu_detect_x86.cpp.o CMakeFiles/echo.dir/audio_filter_function.cpp.o
-  LANGUAGE_COMPILE_FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=22 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info
-  LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a -nostdlib++ --sysroot E:/Android/sdk/ndk-bundle/platforms/android-22/arch-arm -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--fix-cortex-a8 -Wl,--exclude-libs,libunwind.a -LE:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now
+  LANGUAGE_COMPILE_FLAGS = -isystem E:/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=23 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -std=c++11 -Wall -O0 -fno-limit-debug-info
+  LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a -nostdlib++ --sysroot E:/Android/sdk/ndk-bundle/platforms/android-23/arch-arm -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--fix-cortex-a8 -Wl,--exclude-libs,libunwind.a -LE:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now
   LINK_LIBRARIES = -landroid -latomic -llog -lOpenSLES -latomic -lm "E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_static.a" "E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++abi.a" "E:/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libunwind.a" "-ldl"
   OBJECT_DIR = CMakeFiles\echo.dir
   POST_BUILD = cd .

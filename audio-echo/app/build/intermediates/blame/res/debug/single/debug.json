@@ -48,12 +48,12 @@
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\layout-v11\\notification_template_big_media.xml"
-    },
-    {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\layout-v11\\notification_template_big_media.xml"
     },
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_switch_track.xml.flat",
@@ -134,10 +134,6 @@
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_spinner.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_spinner.xml"
     },
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -292,10 +288,6 @@
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_default.xml"
-    },
-    {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -338,10 +330,6 @@
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_borderless_text_material.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -812,10 +800,6 @@
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_thumb.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_switch_thumb.xml"
-    },
-    {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color-v11_abc_background_cache_hint_selector_material_light.xml.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
@@ -1156,10 +1140,6 @@
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
@@ -1196,16 +1176,8 @@
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_edittext.xml"
-    },
-    {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
-    },
-    {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_text_material.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -1266,10 +1238,6 @@
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1442,10 +1410,6 @@
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
-        "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
-        "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\f270bb90b44918c8499839c09866092e\\res\\color\\abc_tint_switch_track.xml"
     },
     {
         "merged": "D:\\OneDrive\\OneDrive - Technion\\projectA\\new_echo_filter\\android-ndk\\audio-echo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11_notification_media_action.xml.flat",

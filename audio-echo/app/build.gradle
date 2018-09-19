@@ -10,7 +10,7 @@ android {
              *) set this minSDKVersion and cmake's ANDROID_PLATFORM to your version
              *) set ANDROID_STL to c++_static for some very earlier version android.
          */
-        minSdkVersion 22
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName '1.0'

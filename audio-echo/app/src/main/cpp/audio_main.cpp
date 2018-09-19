@@ -257,9 +257,19 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
               soundTouch.setSetting(SETTING_OVERLAP_MS, 8);
 
               sample_buf *buf = static_cast<sample_buf *>(data);
-              soundTouch.putSamples((float *)buf->buf_, buf->size_/2);
-              buf->size_ = 2*soundTouch.receiveSamples((float *)buf->buf_, buf->size_/2);
-              buf->cap_ = buf->size_;
+              soundTouch.putSamples((float *) buf->buf_, buf->size_ / 2);
+              uint32_t size = 0;
+              do {
+                  size = soundTouch.receiveSamples((float *) buf->buf_, 512);
+              } while (size != 0);
+              for (size_t idx = 0; idx < buf->size_; idx++) {
+                  int32_t curSample = buf->buf_[idx];
+                  if (curSample > SHRT_MAX)
+                      curSample = SHRT_MAX;
+                  else if (curSample < SHRT_MIN)
+                      curSample = SHRT_MIN;
+                  buf->buf_[idx] = static_cast<int16_t>(curSample);
+              }
           }
             break;
         default:

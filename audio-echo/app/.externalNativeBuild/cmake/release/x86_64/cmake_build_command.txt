@@ -3,7 +3,7 @@ arguments :
 -HD:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\src\main\cpp
 -BD:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\.externalNativeBuild\cmake\release\x86_64
 -DANDROID_ABI=x86_64
--DANDROID_PLATFORM=android-22
+-DANDROID_PLATFORM=android-23
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\OneDrive\OneDrive - Technion\projectA\new_echo_filter\android-ndk\audio-echo\app\build\intermediates\cmake\release\obj\x86_64
 -DCMAKE_BUILD_TYPE=Release
 -DANDROID_NDK=E:\Android\sdk\ndk-bundle
