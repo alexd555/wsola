@@ -257,19 +257,38 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
               soundTouch.setSetting(SETTING_OVERLAP_MS, 8);
 
               sample_buf *buf = static_cast<sample_buf *>(data);
-              soundTouch.putSamples((float *) buf->buf_, buf->size_ / 2);
+              uint samplesCount = buf->size_ / 2;
+              short*  short_buf = new short[samplesCount];  // for mono case
+              for ( int count = 0; count < samplesCount; count++ ) {
+                  short_buf[count] = (short) buf->buf_[count];
+              }
+              soundTouch.putSamples(short_buf, samplesCount);
               uint32_t size = 0;
               do {
-                  size = soundTouch.receiveSamples((float *) buf->buf_, 512);
+                  size = soundTouch.receiveSamples(short_buf, samplesCount);
+                  for ( int count = 0; count < size; count++ ) {
+                      buf->buf_[count] = (uint8_t)short_buf[count];
+                  }
+                  buf->size_ = 2*size;
+                  buf->cap_= 2*size;
+                  //need to send to play
+
               } while (size != 0);
-              for (size_t idx = 0; idx < buf->size_; idx++) {
-                  int32_t curSample = buf->buf_[idx];
-                  if (curSample > SHRT_MAX)
-                      curSample = SHRT_MAX;
-                  else if (curSample < SHRT_MIN)
-                      curSample = SHRT_MIN;
-                  buf->buf_[idx] = static_cast<int16_t>(curSample);
-              }
+
+              soundTouch.flush();
+              do {
+                  size = soundTouch.receiveSamples(short_buf, samplesCount);
+                  for ( int count = 0; count < size; count++ ) {
+                      buf->buf_[count] = (uint8_t)short_buf[count];
+                  }
+                  buf->size_ = 2*size;
+                  buf->cap_= 2*size;
+                  //need to send to play
+
+              } while (size != 0);
+
+
+
           }
             break;
         default:
