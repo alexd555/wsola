@@ -19,6 +19,7 @@ add_library(echo SHARED
             FIRFilter.cpp
             sse_optimized.cpp
             cpu_detect_x86.cpp
+            mmx_optimized.cpp
             audio_filter_function.cpp)
 
 # include libraries needed for hello-jni lib
