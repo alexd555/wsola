@@ -46,6 +46,7 @@ struct EchoAudioEngine {
     uint32_t     frameCount_;
 
     bool        filterOn_;
+    SoundTouch  *soundTouch_;
 };
 static EchoAudioEngine engine;
 
@@ -113,6 +114,22 @@ Java_com_google_sample_echo_MainActivity_createSLEngine(
     assert(engine.freeBufQueue_ && engine.recBufQueue_);
     for(uint32_t i=1; i<engine.bufCount_; i++) {
         engine.freeBufQueue_->push(&engine.bufs_[i]);
+    }
+
+    // Initialize the SoundTouch filter
+    engine.soundTouch_ = new SoundTouch;
+    if (engine.soundTouch_) {
+        engine.soundTouch_->setSampleRate(8000);
+        engine.soundTouch_->setChannels(1);
+
+        engine.soundTouch_->setTempoChange(1);
+        engine.soundTouch_->setPitchSemiTones(20);
+        engine.soundTouch_->setRateChange(1);
+        engine.soundTouch_->setSetting(SETTING_USE_QUICKSEEK, 0);
+        engine.soundTouch_->setSetting(SETTING_USE_AA_FILTER, 1);
+        engine.soundTouch_->setSetting(SETTING_SEQUENCE_MS, 40);
+        engine.soundTouch_->setSetting(SETTING_SEEKWINDOW_MS, 15);
+        engine.soundTouch_->setSetting(SETTING_OVERLAP_MS, 8);
     }
 }
 
@@ -210,6 +227,11 @@ Java_com_google_sample_echo_MainActivity_deleteSLEngine(JNIEnv *env, jclass type
         engine.slEngineObj_ = NULL;
         engine.slEngineItf_ = NULL;
     }
+
+    if (engine.soundTouch_) {
+        delete engine.soundTouch_;
+        engine.soundTouch_ = nullptr;
+    }
 }
 
 uint32_t dbgEngineGetBufCount(void) {
@@ -242,54 +264,19 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
             break;
         case ENGINE_SERVICE_MSG_NEW_AUDIO_FRAME:
             // notify the filter of the new buffer
-          if (engine.filterOn_ ) {
-              SoundTouch soundTouch;
-              soundTouch.setSampleRate(8000);
-              soundTouch.setChannels(1);
-
-              soundTouch.setTempoChange(0.5);
-              soundTouch.setPitchSemiTones(0.5);
-              soundTouch.setRateChange(0.5);
-              soundTouch.setSetting(SETTING_USE_QUICKSEEK, 0);
-              soundTouch.setSetting(SETTING_USE_AA_FILTER, 1);
-              soundTouch.setSetting(SETTING_SEQUENCE_MS, 40);
-              soundTouch.setSetting(SETTING_SEEKWINDOW_MS, 15);
-              soundTouch.setSetting(SETTING_OVERLAP_MS, 8);
-
-              sample_buf *buf = static_cast<sample_buf *>(data);
-              uint samplesCount = buf->size_ / 2;
-              short*  short_buf = new short[samplesCount];  // for mono case
-              for ( int count = 0; count < samplesCount; count++ ) {
-                  short_buf[count] = (short) buf->buf_[count];
-              }
-              soundTouch.putSamples(short_buf, samplesCount);
-              uint32_t size = 0;
+            if (engine.filterOn_ ) {
+              // If you are doing processing that output sample count is equal
+              // to the input sample count, this should be the right way to do it.
+              sample_buf *buf = reinterpret_cast<sample_buf *>(data);
+              uint32_t samplesCount = buf->size_ / 2;
+              short* samples = reinterpret_cast<short*>(buf->buf_);
+              engine.soundTouch_->putSamples(samples, samplesCount);
+              uint32_t count = 0;
               do {
-                  size = soundTouch.receiveSamples(short_buf, samplesCount);
-                  for ( int count = 0; count < size; count++ ) {
-                      buf->buf_[count] = (uint8_t)short_buf[count];
-                  }
-                  buf->size_ = 2*size;
-                  buf->cap_= 2*size;
-                  //need to send to play
-
-              } while (size != 0);
-
-              soundTouch.flush();
-              do {
-                  size = soundTouch.receiveSamples(short_buf, samplesCount);
-                  for ( int count = 0; count < size; count++ ) {
-                      buf->buf_[count] = (uint8_t)short_buf[count];
-                  }
-                  buf->size_ = 2*size;
-                  buf->cap_= 2*size;
-                  //need to send to play
-
-              } while (size != 0);
-
-
-
-          }
+                  count = engine.soundTouch_->receiveSamples(
+                          samples, samplesCount);
+              } while (count != 0);
+            }
             break;
         default:
             assert(false);
