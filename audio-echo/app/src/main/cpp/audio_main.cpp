@@ -47,6 +47,9 @@ struct EchoAudioEngine {
 
     bool        filterOn_;
     SoundTouch  *soundTouch_;
+    SoundTouch  *down_resample;
+    SoundTouch  *up_resample;
+
 };
 static EchoAudioEngine engine;
 
@@ -57,7 +60,7 @@ bool EngineService(void* ctx, uint32_t msg, void* data );
 
 extern "C" {
 JNIEXPORT void JNICALL
-        Java_com_google_sample_echo_MainActivity_createSLEngine(JNIEnv *env, jclass, jint, jint);
+        Java_com_google_sample_echo_MainActivity_createSLEngine(JNIEnv *env, jclass, jint, jint, jint);
 JNIEXPORT void JNICALL
         Java_com_google_sample_echo_MainActivity_deleteSLEngine(JNIEnv *env, jclass type);
 JNIEXPORT jboolean JNICALL
@@ -77,7 +80,7 @@ JNIEXPORT void JNICALL
 
 JNIEXPORT void JNICALL
 Java_com_google_sample_echo_MainActivity_createSLEngine(
-        JNIEnv *env, jclass type, jint sampleRate, jint framesPerBuf) {
+        JNIEnv *env, jclass type, jint sampleRate, jint framesPerBuf, jint pitch) {
     SLresult result;
     memset(&engine, 0, sizeof(engine));
 
@@ -121,10 +124,10 @@ Java_com_google_sample_echo_MainActivity_createSLEngine(
     if (engine.soundTouch_) {
         engine.soundTouch_->setSampleRate(8000);
         engine.soundTouch_->setChannels(1);
-
-        engine.soundTouch_->setTempoChange(1);
-        engine.soundTouch_->setPitchSemiTones(20);
-        engine.soundTouch_->setRateChange(1);
+        int pitchShift = static_cast<uint32_t>(pitch);
+     //   engine.soundTouch_->setTempoChange(1);
+        engine.soundTouch_->setPitchSemiTones(pitchShift);
+      //  engine.soundTouch_->setRateChange(1);
         engine.soundTouch_->setSetting(SETTING_USE_QUICKSEEK, 0);
         engine.soundTouch_->setSetting(SETTING_USE_AA_FILTER, 1);
         engine.soundTouch_->setSetting(SETTING_SEQUENCE_MS, 40);
@@ -265,17 +268,17 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
         case ENGINE_SERVICE_MSG_NEW_AUDIO_FRAME:
             // notify the filter of the new buffer
             if (engine.filterOn_ ) {
-              // If you are doing processing that output sample count is equal
-              // to the input sample count, this should be the right way to do it.
-              sample_buf *buf = reinterpret_cast<sample_buf *>(data);
-              uint32_t samplesCount = buf->size_ / 2;
-              short* samples = reinterpret_cast<short*>(buf->buf_);
-              engine.soundTouch_->putSamples(samples, samplesCount);
-              uint32_t count = 0;
-              do {
-                  count = engine.soundTouch_->receiveSamples(
-                          samples, samplesCount);
-              } while (count != 0);
+                // If you are doing processing that output sample count is equal
+                // to the input sample count, this should be the right way to do it.
+                sample_buf *buf = reinterpret_cast<sample_buf *>(data);
+                uint32_t samplesCount = buf->size_ / 2;
+                short* samples = reinterpret_cast<short*>(buf->buf_);
+                engine.soundTouch_->putSamples(samples, samplesCount);
+                uint32_t count = 0;
+                do {
+                    count = engine.soundTouch_->receiveSamples(
+                            samples, samplesCount);
+                } while (count != 0);
             }
             break;
         default:

@@ -9,10 +9,11 @@
         android:id="@+id/capture_control_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/StartEcho"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="147dp"
         android:onClick="onEchoClick"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/StartEcho" />
 
     <Button
         android:layout_width="wrap_content"
@@ -44,22 +45,45 @@
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="299dp"
         android:layout_height="33dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="176dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="106dp"
         android:max="10"
         android:progress="0" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <SeekBar
+        android:id="@+id/pitch_shifting"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="299dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/delay_factor"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="131dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="262dp"
+        android:max="24"
+        android:progress="12" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/capture_control_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="79dp"
         android:text="Delay"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/capture_control_button"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-27dp"
+        android:layout_marginTop="237dp"
+        android:text="Pitch shifting"
         android:textAlignment="center" />
 
 </RelativeLayout>

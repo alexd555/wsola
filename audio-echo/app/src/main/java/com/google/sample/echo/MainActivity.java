@@ -49,8 +49,10 @@ public class MainActivity extends Activity
     Boolean isPlaying = false;
     boolean filterOn = false;
     int delay_factor=1;
+    int pitch_shifting = 0;
     Thread mThread=null;
     SeekBar seekBar =  null;
+    SeekBar pitchBar = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +60,36 @@ public class MainActivity extends Activity
         controlButton = (Button)findViewById((R.id.capture_control_button));
         statusView = (TextView)findViewById(R.id.statusView);
         toggleFilter = (Button)findViewById((R.id.toggle_filter_button));
+        final SeekBar pitchShifting = (SeekBar)findViewById(R.id.pitch_shifting);
+        pitchShifting.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                pitch_shifting = i - 12;
+                if(!isPlaying) {
+                    return;
+                }
+
+                // we are in echoing, re-start it
+                mThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        restartEcho();
+                    }
+                });
+                mThread.start();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        pitchBar = pitchShifting;
         final SeekBar delayBar = (SeekBar)findViewById(R.id.delay_factor);
         seekBar = delayBar;
         delayBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -136,7 +168,9 @@ public class MainActivity extends Activity
     private void startEchoThread()
     {
         if (!isPlaying) {
-            createSLEngine(Integer.parseInt(nativeSampleRate), delay_factor * Integer.parseInt(nativeSampleBufSize));
+            createSLEngine(Integer.parseInt(nativeSampleRate),
+                    delay_factor * Integer.parseInt(nativeSampleBufSize),
+                    pitch_shifting);
             enableFilter(filterOn);
             if(!createSLBufferQueueAudioPlayer()) {
                 updateStatusUI(getString(R.string.error_player));
@@ -179,7 +213,9 @@ public class MainActivity extends Activity
         deleteSLEngine();
 
         // Starting...
-        createSLEngine(Integer.parseInt(nativeSampleRate), delay_factor * Integer.parseInt(nativeSampleBufSize));
+        createSLEngine(Integer.parseInt(nativeSampleRate),
+                delay_factor * Integer.parseInt(nativeSampleBufSize),
+                pitch_shifting);
         enableFilter(filterOn);
         if(!createSLBufferQueueAudioPlayer()) {
             updateStatusUI(getString(R.string.error_player));
@@ -233,9 +269,9 @@ public class MainActivity extends Activity
 
     private void queryNativeAudioParameters() {
         AudioManager myAudioMgr = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        nativeSampleRate  =  8000+""; //myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE);
-        nativeSampleBufSize_base = 512+"";// myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
-        nativeSampleBufSize = 512+"" ;//myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
+        nativeSampleRate  =  "8000"; //myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE);
+        nativeSampleBufSize_base ="512"; // myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
+        nativeSampleBufSize = "512"; //myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
 
 
 
@@ -255,13 +291,15 @@ public class MainActivity extends Activity
             statusView.setText(getString(R.string.error_no_mic));
             controlButton.setEnabled(false);
             seekBar.setEnabled(false);
+            pitchBar.setEnabled(false);
             return;
         }
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
             statusView.setText("nativeSampleRate    = " + nativeSampleRate + "\n" +
-                   "nativeSampleBufSize = " + delay_factor * Integer.parseInt(nativeSampleBufSize) + "\n");
+                   "nativeSampleBufSize = " + delay_factor * Integer.parseInt(nativeSampleBufSize) + "\n" +
+            "pitch shifting = "+pitch_shifting+"\n");
             }
         });
     }
@@ -273,6 +311,7 @@ public class MainActivity extends Activity
             public void run() {
                 controlButton.setEnabled(enable);
                 seekBar.setEnabled(enable);
+                pitchBar.setEnabled(enable);
             }
         });
     }
@@ -337,7 +376,7 @@ public class MainActivity extends Activity
     /*
      * jni function implementations...
      */
-    public static native void createSLEngine(int rate, int framesPerBuf);
+    public static native void createSLEngine(int rate, int framesPerBuf, int pitch);
     public static native void deleteSLEngine();
 
     public static native boolean createSLBufferQueueAudioPlayer();
