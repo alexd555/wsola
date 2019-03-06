@@ -18,7 +18,7 @@
 #include "audio_player.h"
 #include "audio_filter_function.h"
 #include "SoundTouch.h"
-
+#include "audio_effect.h"
 #include <sys/types.h>
 #include <SLES/OpenSLES.h>
 
@@ -46,10 +46,12 @@ struct EchoAudioEngine {
     uint32_t     frameCount_;
 
     bool        filterOn_;
+    float       gain_;
     SoundTouch  *soundTouch_;
     SoundTouch  *down_resample;
     SoundTouch  *up_resample;
 
+    AudioDelay *delayEffect_;
 };
 static EchoAudioEngine engine;
 
@@ -60,7 +62,7 @@ bool EngineService(void* ctx, uint32_t msg, void* data );
 
 extern "C" {
 JNIEXPORT void JNICALL
-        Java_com_google_sample_echo_MainActivity_createSLEngine(JNIEnv *env, jclass, jint, jint, jint);
+        Java_com_google_sample_echo_MainActivity_createSLEngine(JNIEnv *env, jclass, jint, jint, jint, jfloat);
 JNIEXPORT void JNICALL
         Java_com_google_sample_echo_MainActivity_deleteSLEngine(JNIEnv *env, jclass type);
 JNIEXPORT jboolean JNICALL
@@ -80,7 +82,7 @@ JNIEXPORT void JNICALL
 
 JNIEXPORT void JNICALL
 Java_com_google_sample_echo_MainActivity_createSLEngine(
-        JNIEnv *env, jclass type, jint sampleRate, jint framesPerBuf, jint pitch) {
+        JNIEnv *env, jclass type, jint sampleRate, jint framesPerBuf, jint pitch, jfloat gain) {
     SLresult result;
     memset(&engine, 0, sizeof(engine));
 
@@ -88,6 +90,10 @@ Java_com_google_sample_echo_MainActivity_createSLEngine(
     engine.fastPathFramesPerBuf_ = static_cast<uint32_t>(framesPerBuf);
     engine.sampleChannels_   = AUDIO_SAMPLE_CHANNELS;
     engine.bitsPerSample_    = kBitsPerSample;
+    engine.gain_ = gain;
+    engine.delayEffect_ = new AudioDelay(
+            engine.fastPathSampleRate_, engine.sampleChannels_, engine.bitsPerSample_,
+            1, 1.0);
 
     result = slCreateEngine(&engine.slEngineObj_, 0, NULL, 0, NULL, NULL);
     SLASSERT(result);
@@ -123,7 +129,7 @@ Java_com_google_sample_echo_MainActivity_createSLEngine(
     engine.soundTouch_ = new SoundTouch;
     if (engine.soundTouch_) {
         engine.soundTouch_->setSampleRate(8000);
-        engine.soundTouch_->setChannels(1);
+        engine.soundTouch_->setChannels(engine.sampleChannels_);
         int pitchShift = static_cast<uint32_t>(pitch);
      //   engine.soundTouch_->setTempoChange(1);
         engine.soundTouch_->setPitchSemiTones(pitchShift);
@@ -265,14 +271,16 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
         case ENGINE_SERVICE_MSG_RETRIEVE_DUMP_BUFS:
             *(static_cast<uint32_t*>(data)) = dbgEngineGetBufCount();
             break;
-        case ENGINE_SERVICE_MSG_NEW_AUDIO_FRAME:
+        case ENGINE_SERVICE_MSG_NEW_AUDIO_FRAME: {
+            sample_buf *buf = reinterpret_cast<sample_buf *>(data);
+            uint32_t samplesCount = buf->size_ / 2;
+            short *samples = reinterpret_cast<short *>(buf->buf_);
             // notify the filter of the new buffer
-            if (engine.filterOn_ ) {
+            if (engine.filterOn_) {
                 // If you are doing processing that output sample count is equal
                 // to the input sample count, this should be the right way to do it.
-                sample_buf *buf = reinterpret_cast<sample_buf *>(data);
-                uint32_t samplesCount = buf->size_ / 2;
-                short* samples = reinterpret_cast<short*>(buf->buf_);
+
+
                 engine.soundTouch_->putSamples(samples, samplesCount);
                 uint32_t count = 0;
                 do {
@@ -280,7 +288,9 @@ bool EngineService(void* ctx, uint32_t msg, void* data ) {
                             samples, samplesCount);
                 } while (count != 0);
             }
+            engine.delayEffect_->process(samples, samplesCount, engine.gain_);
             break;
+        }
         default:
             assert(false);
             return false;

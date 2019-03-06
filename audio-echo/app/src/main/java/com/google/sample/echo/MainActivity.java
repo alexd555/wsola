@@ -50,9 +50,11 @@ public class MainActivity extends Activity
     boolean filterOn = false;
     int delay_factor=1;
     int pitch_shifting = 0;
+    float gain_factor = 1;
     Thread mThread=null;
     SeekBar seekBar =  null;
     SeekBar pitchBar = null;
+    SeekBar gainBar = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +92,36 @@ public class MainActivity extends Activity
             }
         });
         pitchBar = pitchShifting;
+        final SeekBar gainFactor = (SeekBar)findViewById(R.id.gain_factor);
+        gainFactor.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                gain_factor = (float)((i+1)/100.0);
+                if(!isPlaying) {
+                    return;
+                }
+
+                // we are in echoing, re-start it
+                mThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        restartEcho();
+                    }
+                });
+                mThread.start();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        gainBar = gainFactor;
         final SeekBar delayBar = (SeekBar)findViewById(R.id.delay_factor);
         seekBar = delayBar;
         delayBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -170,7 +202,7 @@ public class MainActivity extends Activity
         if (!isPlaying) {
             createSLEngine(Integer.parseInt(nativeSampleRate),
                     delay_factor * Integer.parseInt(nativeSampleBufSize),
-                    pitch_shifting);
+                    pitch_shifting, gain_factor);
             enableFilter(filterOn);
             if(!createSLBufferQueueAudioPlayer()) {
                 updateStatusUI(getString(R.string.error_player));
@@ -215,7 +247,7 @@ public class MainActivity extends Activity
         // Starting...
         createSLEngine(Integer.parseInt(nativeSampleRate),
                 delay_factor * Integer.parseInt(nativeSampleBufSize),
-                pitch_shifting);
+                pitch_shifting, gain_factor);
         enableFilter(filterOn);
         if(!createSLBufferQueueAudioPlayer()) {
             updateStatusUI(getString(R.string.error_player));
@@ -269,9 +301,9 @@ public class MainActivity extends Activity
 
     private void queryNativeAudioParameters() {
         AudioManager myAudioMgr = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        nativeSampleRate  =  "8000"; //myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE);
-        nativeSampleBufSize_base ="512"; // myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
-        nativeSampleBufSize = "512"; //myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
+        nativeSampleRate  =  "8000" ;//myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE);
+        nativeSampleBufSize_base ="1440"; // myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
+        nativeSampleBufSize = "1440"; //myAudioMgr.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
 
 
 
@@ -299,7 +331,7 @@ public class MainActivity extends Activity
             public void run() {
             statusView.setText("nativeSampleRate    = " + nativeSampleRate + "\n" +
                    "nativeSampleBufSize = " + delay_factor * Integer.parseInt(nativeSampleBufSize) + "\n" +
-            "pitch shifting = "+pitch_shifting+"\n");
+            "gain = "+gain_factor);
             }
         });
     }
@@ -312,6 +344,7 @@ public class MainActivity extends Activity
                 controlButton.setEnabled(enable);
                 seekBar.setEnabled(enable);
                 pitchBar.setEnabled(enable);
+                gainBar.setEnabled(enable);
             }
         });
     }
@@ -376,7 +409,7 @@ public class MainActivity extends Activity
     /*
      * jni function implementations...
      */
-    public static native void createSLEngine(int rate, int framesPerBuf, int pitch);
+    public static native void createSLEngine(int rate, int framesPerBuf, int pitch, float gain);
     public static native void deleteSLEngine();
 
     public static native boolean createSLBufferQueueAudioPlayer();

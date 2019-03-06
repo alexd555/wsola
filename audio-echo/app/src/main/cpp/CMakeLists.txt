@@ -7,6 +7,7 @@ add_library(echo SHARED
             audio_main.cpp
             audio_player.cpp
             audio_recorder.cpp
+			audio_effect.cpp
             debug_utils.cpp
             SoundTouch.cpp
             RateTransposer.cpp
